@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/styleform.css">
-    <title>Booking Page</title>
+    <title>Cancel Booking Page</title>
 </head>
 <body>
 
@@ -15,8 +15,6 @@
         <ul>
             <li><a href="/html/home.html">Home</a></li>
             <li><a href="/html/info.html">Info</a></li>
-            <li><a href="/html/login.html">Log In</a></li>
-            <li><a href="/html/cancelbooking.html">Cancel Booking</a></li>
             <li><a href="/html/CheckBookingStatus.html">Check Booking Status</a></li>
             <li><a href="/html/review.html">Reviews</a></li>
         </ul>
@@ -26,21 +24,18 @@
     <!--CSS from Review-Form-->
     <div class="review-form">
         <div class="review-heading">
-            <h1>Check Availability:</h1>
+            <h1>Cancel Booking:</h1>
         </div>
         <div class="review-form-input">
             <form>
-                <label for="name"><b>Check In Date:</b></label><br>
-                <input type="date" id="check-in" name="check-in"><br>
+                <label for="name"><b>Name</b></label><br>
+                <input type="text" id="name" name="name"><br>
+                <label for="email"><b>Email:</b></label><br>
+                <input type="email" id="email" name="email"><br>
+                <label for="code"><b>Booking Id:</b></label><br>
+                <input type="text" id="id" name="id"><br>
                 <br>
-                <label for="email"><b>Check Out Date:</b></label><br>
-                <input type="date" id="check-out" name="check-out"><br>
-                <br>
-                <label for="quantity"><b>Rooms:</b></label><br>
-  <input type="number" id="quantity" name="quantity" min="1" max="15" step="1" value="1">
-                <br>
-                
-                <input type="button" name="" value="Check Availability"style="color: black;cursor: pointer;">
+                <input type="button" name="" value="Cancel"style="color: black;cursor: pointer;">
             </form>
         </div>
         
