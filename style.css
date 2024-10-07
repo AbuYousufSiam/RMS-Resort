@@ -1,0 +1,70 @@
+*
+{
+    top:0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    
+   
+}
+.img{
+    background-image: url("images/dusk.jpg");
+    background-size: cover;
+    height:600px;
+    background-repeat: no-repeat;
+}
+.img h1{
+    margin-top: 20px;
+    padding: 10px;
+    text-align: center;
+    font-size: 75px;
+}
+.img p{
+    text-align: center;
+    font-size: 20px;
+}
+
+
+.bgcolor{
+    background-color: bisque;
+
+}
+
+.navigationbg{
+    
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(145, 139, 139);
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+
+}
+
+.navigationbg ul li{
+    list-style-type: none;
+   float: right;
+   font-size: medium;
+
+
+}
+
+.navigationbg ul li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  .navigationbg ul li a:hover{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: underline;
+    background-color:  rgb(230, 223, 223);
+  }
+
