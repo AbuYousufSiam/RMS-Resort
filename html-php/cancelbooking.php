@@ -15,7 +15,7 @@
         <ul>
             <li><a href="/RMS/html-php/home.php">Home</a></li>
             <li><a href="/RMS/html-php/info.php">Info</a></li>
-            <li><a href="/RMS/html-php/CheckBookingStatus.php">Check Booking Status</a></li>
+            <li><a href="/RMS/html-php/CheckBookingStatus.php">Check  Booking Status</a></li>
             <li><a href="/RMS/html-php/review.php">Reviews</a></li>
         </ul>
     </div>

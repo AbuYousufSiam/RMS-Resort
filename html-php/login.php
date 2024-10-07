@@ -19,11 +19,9 @@
     <div class="bar">
         <ul>
             <li><a href="/RMS/html-php/home.php">Home</a></li>
-            <li><a href="/RMS/html-php/info.php">Info</a></li>
             <li><a href="/RMS/html-php/login.php">Log In</a></li>
-            <li><a href="/RMS/html-php/cancelbooking.php">Cancel Booking</a></li>
-            <li><a href="/RMS/html-php/CheckBookingStatus.php">CheckBooking Status</a></li>
-            <li><a href="/RMS/html-php/review.php">Reviews</a></li>
+            <li><a href="/RMS/html-php/singup.php">Sign Up</a></li>
+
         </ul>
     </div>
 
@@ -76,7 +74,7 @@
                                     {
                                         ?>
                                         <script>
-                                            alert("Loggged in Successfully");
+                                            alert("Logged in Successfully");
                                         </script>
                                         <?php
                                         header("Location: /RMS/html-php/admin.php");

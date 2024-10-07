@@ -49,8 +49,11 @@
             <li><a href="/RMS/html-php/meeting.php">Meeting</a></li>
             <li><a href="RMS/html-php/dining.php">Dining</a></li>
             <li><a href="/RMS/html-php/offers.php">Special Offers</a></li>
-            <li><a href="/RMS/html-php/booking.php">Book Now</a></li>
             <li><a href="/RMS/html-php/review.php">Reviews</a></li>
+            <li><a href="/RMS/html-php/booking.php">Book Now</a></li>
+            <li><a href="/RMS/html-php/info.php">Info</a></li>
+            <li><a href="/RMS/html-php/login.php">Log In</a></li>
+            
         </ul>
     </div>
 

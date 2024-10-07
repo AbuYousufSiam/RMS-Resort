@@ -75,11 +75,14 @@
     </div>
 
     <?php
-        $con = new mysqli("localhost","root","","rms");
-        if($con->connect_error){
-            die("Failed to connect : ".$con->connect_error);
-        }
-        else {
+        $username = "root";
+        $password = "";
+        $server = "localhost";
+        $database = "rms";
+    
+        $con = mysqli_connect($server,$username,$password,$database);
+        if($con)
+        {
             if(isset($_POST["button"])){
                 $name = $_POST["name"];
                 $uname = $_POST["username"];
@@ -90,12 +93,33 @@
                 $pass = $_POST["pass"];
                 $pass2 = $_POST["conpass"];
                 if($pass==$pass2){
-                    $sql= "SELECT * FROM employee-pass WHERE Index ='1'";
-                    $res = mysqli_query($con,$sql) or die(mysqli_error($con));
+                    $sql= "SELECT * FROM `employee-pass` WHERE `Index` = 1";
+                    $res = mysqli_query($con,$sql) /*or die(mysqli_error($con))*/;
                     $row = mysqli_fetch_assoc($res);
                     $empass = $row['e-pass'];
                     if($empass == $epass){
-                        header("Location:/RMS/html-php/home.php");
+                        $insertquery = " INSERT INTO `admin`(`name`, `username`, `address`, `email`, `phone`, `password`)
+                         VALUES ('$name','$uname','$address','$mail','$contact','$pass')";
+
+                        $res1 = mysqli_query($con,$insertquery);
+
+                        if($res1){
+                        ?>
+                        <script>
+                            alert("data inserted properly");
+                        </script>
+                        <?php
+                        header("Location:/RMS/html-php/admin.php");
+                        }
+                        else{
+                                ?>
+                                <script>
+                                alert("data not inserted");
+                                </script>
+                                <?php
+                                header("Location:/RMS/html-php/signup.php");
+                            }
+                        
                     }
                     else{
                         ?>
@@ -114,6 +138,9 @@
                 }
             }
             
+        }
+        else{
+            die("No connection.." . mysqli_connect_error());
         }
     ?>
 </body>
