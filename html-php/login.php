@@ -21,7 +21,6 @@
             <li><a href="/RMS/html-php/home.php">Home</a></li>
             <li><a href="/RMS/html-php/login.php">Log In</a></li>
             <li><a href="/RMS/html-php/singup.php">Sign Up</a></li>
-
         </ul>
     </div>
 
@@ -53,15 +52,16 @@
     </div>
 
     <?php
-        $uname = $_POST["username"];
-        $pass = $_POST["password"];
-
-        $con = new mysqli("localhost","root","","rms");
-        if($con->connect_error){
-            die("Failed to connect : ".$con->connect_error);
-        }
-        else {
+        $username = "root";
+        $password = "";
+        $server = "localhost";
+        $database = "rms";
+    
+        $con = mysqli_connect($server,$username,$password,$database);
+        if($con){
                 if(isset($_POST["submit"])){
+                    $uname = $_POST["username"];
+                    $pass = $_POST["password"];
                     $sql= "select * from admin where username = '$uname'";
                     $res = mysqli_query($con,$sql) or die(mysqli_error($con));
                     $count = mysqli_num_rows($res);
@@ -74,7 +74,7 @@
                                     {
                                         ?>
                                         <script>
-                                            alert("Logged in Successfully");
+                                            alert("Loggged in Successfully");
                                         </script>
                                         <?php
                                         header("Location: /RMS/html-php/admin.php");
@@ -96,6 +96,9 @@
                             <?php
                         }
                 }  
+        }
+        else{
+            die("No connection.." . mysqli_connect_error());
         }
     ?>
 </body>

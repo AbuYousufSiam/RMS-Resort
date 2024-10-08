@@ -7,18 +7,19 @@
     box-sizing: border-box;
 }
 body{
-    background-color: rgba(31, 209, 126, 0.589);
+    background-color: whitesmoke;
     background-size: cover;
     background-position: center;
     font-family: sans-serif;
 }
 
 .hierarchical_bar{
+    display: block;
     background-color: rgb(5, 201, 80);
-    font-size: 25px;
+    font-size: 20px;
     text-align: center;
     position: sticky;
-    padding: 5 px;
+    padding: 15 px;
 }
 .hierarchical_bar ul{
     top: 0;
@@ -32,7 +33,7 @@ body{
 .hierarchical_bar ul li{
     padding: 30 px, 17 px;
     float: center;
-    width: 160px;
+    width: 165px;
     margin: 20 px;
 }
 .hierarchical_bar ul li a{
@@ -200,19 +201,18 @@ img {
 
 .sub-menu{
     display: none;
-
 }
 .hierarchical_bar ul li:hover .sub-menu{
     display: block;
     position: absolute;
     background: rgb(0,100,0);
-    margin-top: 15px;
-    margin-left: 15px;
+    margin-top: 5px;
+    margin-left: 5px;
 }
 
 .hierarchical_bar ul li:hover .sub-menu ul{
     display: block;
-    margin: 10px;
+    margin: 2px;
 }
 
 .hierarchical_bar ul li:hover .sub-menu ul li{
@@ -220,7 +220,7 @@ img {
     padding: 10px;
     border-bottom: 1px dotted #fff;
     background: transparent;
-    border-radius: 0;
+    border-radius: none;
     text-align: left;
 
 }

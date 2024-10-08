@@ -61,7 +61,6 @@
                 <div class="comment">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat perferendis ipsum rem officia? Accusamus nihil est blanditiis aliquid, voluptatem id asperiores ab maiores molestias perferendis, officiis at error accusantium facilis</p>
                 </div>
-
             </div>
             <!--Box-2-->
             <div class="review-box">
@@ -94,7 +93,6 @@
                 <div class="comment">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat perferendis ipsum rem officia? Accusamus nihil est blanditiis aliquid, voluptatem id asperiores ab maiores molestias perferendis, officiis at error accusantium facilis</p>
                 </div>
-
             </div>
             <!--Box-3-->
             <div class="review-box">
@@ -127,7 +125,6 @@
                 <div class="comment">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat perferendis ipsum rem officia? Accusamus nihil est blanditiis aliquid, voluptatem id asperiores ab maiores molestias perferendis, officiis at error accusantium facilis</p>
                 </div>
-
             </div>
             <!--Box-4-->
             <div class="review-box">
@@ -160,7 +157,6 @@
                 <div class="comment">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat perferendis ipsum rem officia? Accusamus nihil est blanditiis aliquid, voluptatem id asperiores ab maiores molestias perferendis, officiis at error accusantium facilis</p>
                 </div>
-
             </div>
         </div>
 
@@ -173,7 +169,7 @@
             <h1>Give Review:</h1>
         </div>
         <div class="review-form-input">
-            <form>
+            <form action="review.php" method="POST">
                 <label for="name"><b>Name:</b></label><br>
                 <input type="text" id="name" name="Name"><br>
                 
@@ -181,15 +177,14 @@
                 <input type="email" id="email" name="email"><br>
                 
                 <label for="reviews"><b>Comment:</b></label><br>
-                <textarea rows="4" cols="50" name="comment" form="usrform"></textarea><br>
+                <textarea name="comment" rows="4" cols="50" ></textarea><br>
 
                 <label for="quantity"><b>Give Rating(out of 5):</b></label><br>
-                <input type="number" id="quantity" name="quantity" min="0" max="5" step="0.5" value="1"><br>
+                <input type="number" id="quantity" name="quantity" min="0" max="5" step="0.5" value="5"><br>
                 
-                <input type="button" name="" value="Submit"style="color: black;cursor: pointer;width: 30%">
+                <input class="button" type="submit" name="button" value="Submit" style="color: black;cursor: pointer;width: 30%">
             </form>
         </div>
-        
     </div>
     <!--footer-->
     <div class="footer">
@@ -197,5 +192,46 @@
         <p style="font-size: 20px;">59/A,Mouchak,Gazipur,Dhaka</p><br>
         <p style="font-size: 15px;">Contact Us: +880 01712577638, Hotline:  +880 1617005522</p>
     </div>
+
+    <?php
+        $username = "root";
+        $password = "";
+        $server = "localhost";
+        $database = "rms";
+    
+        $con = mysqli_connect($server,$username,$password,$database);
+        if($con){
+                if(isset($_POST["button"]))
+                {
+                    $name = $_POST["Name"];
+                    $mail = $_POST["email"];
+                    $review = $_REQUEST["comment"];
+                    $rating = $_POST["quantity"];
+
+                     $insertquery = " INSERT INTO `customer_review` (`Name`, `Email`, `Review`, `Rating`)
+                         VALUES ('$name','$mail','$review','$rating')";
+                    $res = mysqli_query($con,$insertquery);
+
+                        if($res){
+                            ?>
+                            <script>
+                                alert("Thanks for your review!");
+                            </script>
+                            <?php
+                            header("Location:/RMS/html-php/home.php");
+                            }
+                        else{
+                                ?>
+                                <script>
+                                    alert("Sorry! data not inserted");
+                                </script>
+                                <?php
+                                 header("Location:/RMS/html-php/home.php");
+                            }
+                        
+                }
+            }
+        ?>
+
 </body>
 </html>

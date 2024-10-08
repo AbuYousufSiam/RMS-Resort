@@ -10,6 +10,17 @@
     background-attachment: scroll;
 }
 
+.background_Admin{
+    margin: 0;
+    padding: 0;
+    width:100%;
+    height:665px;
+    background-image: url("/RMS/img/home3.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+
 .form{
     width: 280px;
     position: absolute;
