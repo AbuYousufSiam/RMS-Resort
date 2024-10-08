@@ -21,6 +21,10 @@
             <li><a href="/RMS/html-php/review.php">Reviews</a></li>
         </ul>
     </div>
+    <!--This is the php query to just fetch-->
+    
+  
+        
 <!--Customer Review-->
     <section id="review">
         <!--review-heading-->
@@ -59,7 +63,7 @@
 
                 <!--Comments-->
                 <div class="comment">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat perferendis ipsum rem officia? Accusamus nihil est blanditiis aliquid, voluptatem id asperiores ab maiores molestias perferendis, officiis at error accusantium facilis</p>
+                    <p>AAAAAAAA</p>
                 </div>
             </div>
             <!--Box-2-->
@@ -91,7 +95,7 @@
 
                 <!--Comments-->
                 <div class="comment">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat perferendis ipsum rem officia? Accusamus nihil est blanditiis aliquid, voluptatem id asperiores ab maiores molestias perferendis, officiis at error accusantium facilis</p>
+                    <p>BBBBBBBBBB</p>
                 </div>
             </div>
             <!--Box-3-->
@@ -123,7 +127,7 @@
 
                 <!--Comments-->
                 <div class="comment">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat perferendis ipsum rem officia? Accusamus nihil est blanditiis aliquid, voluptatem id asperiores ab maiores molestias perferendis, officiis at error accusantium facilis</p>
+                    <p>CCCCCCCCCCCCCCCC</p>
                 </div>
             </div>
             <!--Box-4-->
@@ -155,12 +159,13 @@
 
                 <!--Comments-->
                 <div class="comment">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat perferendis ipsum rem officia? Accusamus nihil est blanditiis aliquid, voluptatem id asperiores ab maiores molestias perferendis, officiis at error accusantium facilis</p>
+                    <p>DDDDDDDDDDDD</p>
                 </div>
             </div>
         </div>
 
     </section>
+    
     
     <hr>
     <!--Review-Form-->
@@ -186,6 +191,7 @@
             </form>
         </div>
     </div>
+    
     <!--footer-->
     <div class="footer">
         <p style="font-size: 60px;"><b>Tusti Resort</b></p><br>
