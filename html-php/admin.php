@@ -5,8 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel = "stylesheet" href="/RMS/css/style_admin.css">
-    <title>Admin Page</title>
+    <title>Tusti Resort</title>
     <style>
+        body{
+            background-color: whitesmoke;
+        }
         .background{
             background-image: url(/RMS/img/home2.jpg);
             height:665px;
@@ -44,16 +47,32 @@
             <li><a href="#">Reservations</a>
                 <ul>
                     <li><a href="#">Reserved Rooms</a></li>
-                    <li><a href="#">Available Rooms</a></li>
+                    <li><a href="/RMS/html-php/available_rooms.php">Available Rooms</a></li>
                     <li><a href="#">Reserved Villas</a></li>
-                    <li><a href="#">Available Villas</a></li>
+                    <li><a href="/RMS/html-php/available_villas.php">Available Villas</a></li>
                     <li><a href="#">Reserved Meeting Rooms & Halls</a></li>
-                    <li><a href="#">Available Meeting Rooms & Halls</a></li>
+                    <li><a href="/RMS/html-php/available_meeting_rooms.php">Available Meeting Rooms & Halls</a></li>
                 </ul>
             </li>
             <li><a href="/RMS/html-php/home.php">Log Out</a></li>
         </ul>
     </nav>
+    <p ><h1 style= "color: rgb(208,240,192)">Name: </h1></p>
+    <p ><h1 style= "color: rgb(208,240,192)">Date of Birth: </h1></p>
+    <p ><h1 style= "color: rgb(208,240,192)">Id Number: </h1></p>
+    <p ><h1 style= "color: rgb(208,240,192)">Joining Date: </h1></p>
+    <p ><h1 style= "color: rgb(208,240,192)">Contact Number: </h1></p>
+    <p ><h1 style= "color: rgb(208,240,192)">Address: </h1></p>
+    <p ><h1 style= "color: rgb(208,240,192)">Country: </h1></p>
+
+<!--   <p ><h1 style= "color: rgb(255,240,245)">Name: </h1></p>
+    <p ><h1 style= "color: rgb(208,240,192)">Date of birth: </h1></p>
+    <p ><h1 style= "color: rgb(118,255,122)">Id number: </h1></p>
+    <p ><h1 style= "color: rgb(209,226,49)">Joining date: </h1></p>
+    <p ><h1 style= "color: rgb(255,135,141)">Contact Number: </h1></p>
+    <p ><h1 style= "color: rgb(255,145,164)">Address: </h1></p>
+    <p ><h1 style= "color: rgb(60,208,112)">Country: </h1></p>
+-->
 
     </div>
 

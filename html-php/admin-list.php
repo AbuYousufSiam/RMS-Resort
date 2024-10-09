@@ -5,10 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel = "stylesheet" href="/RMS/css/style_admin.css">
-    <title>Room Details</title>
+    <title>Tusti Resort</title>
 
     <!-- styles for the table and header with background-->
+<!-- #898a74
+rgb(137,138,116)
+Rusty celadon
+--> 
     <style > /* type= "text/css" */
+        body{
+            background-color: rgb(137,138,116);
+        }
+        
         table{
             border-collapse: collapse;
             width: 100%;
@@ -60,11 +68,11 @@
             <li><a href="#">Reservations</a>
                 <ul>
                     <li><a href="#">Reserved Rooms</a></li>
-                    <li><a href="#">Available Rooms</a></li>
+                    <li><a href="/RMS/html-php/available_rooms.php">Available Rooms</a></li>
                     <li><a href="#">Reserved Villas</a></li>
-                    <li><a href="#">Available Villas</a></li>
+                    <li><a href="/RMS/html-php/available_villas.php">Available Villas</a></li>
                     <li><a href="#">Reserved Meeting Rooms & Halls</a></li>
-                    <li><a href="#">Available Meeting Rooms & Halls</a></li>
+                    <li><a href="/RMS/html-php/available_meeting_rooms.php">Available Meeting Rooms & Halls</a></li>
                 </ul>
             </li>
             <li><a href="/RMS/html-php/home.php">Log Out</a></li>
@@ -74,12 +82,13 @@
 
 
 <!--https://youtu.be/1NC8G_zWDJY-->
-<div>
-    <h1>Admin Lists</h1>
-</div>
+
 
 
 <div class="list">
+<div>
+    <h1>Admin Lists</h1>
+</div>
     <table>
         <thead>
             <tr>
@@ -117,6 +126,5 @@
         </tbody>
     </table>
     </div>
-
 </body>
 </html>

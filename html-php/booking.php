@@ -29,17 +29,17 @@
         </div>
         <div class="review-form-input">
             <form>
-                <label for="name"><b>Check In Date:</b></label><br>
+                <label for="name"><b>Check-In Date:</b></label><br>
                 <input type="date" id="check-in" name="check-in"><br>
                 
-                <label for="email"><b>Check Out Date:</b></label><br>
+                <label for="email"><b>Check-Out Date:</b></label><br>
                 <input type="date" id="check-out" name="check-out"><br>
                 
-                <label for="quantity"><b>Rooms:</b></label><br>
+                <label for="quantity"><b>Accommodations:</b></label><br>
                 <input type="number" id="quantity" name="quantity" min="1" max="15" step="1" value="1"><br>
                 <br>
                 
-                <input type="button" name="" value="Check Availability"style="color: black;cursor: pointer;">
+                <input type="button" name="" value="Check Availability"style="color: blue; cursor: pointer;">
             </form>
         </div>
         

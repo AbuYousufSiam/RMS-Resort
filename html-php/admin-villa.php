@@ -9,6 +9,9 @@
 
     <!-- styles for the table and header with background-->
     <style > /* type= "text/css" */
+        body{
+            background-color: rgb(137,138,116);
+        }
         table{
             border-collapse: collapse;
             width: 100%;
@@ -61,11 +64,11 @@
             <li><a href="#">Reservations</a>
                 <ul>
                     <li><a href="#">Reserved Rooms</a></li>
-                    <li><a href="#">Available Rooms</a></li>
+                    <li><a href="/RMS/html-php/available_rooms.php">Available Rooms</a></li>
                     <li><a href="#">Reserved Villas</a></li>
-                    <li><a href="#">Available Villas</a></li>
+                    <li><a href="/RMS/html-php/available_villas.php">Available Villas</a></li>
                     <li><a href="#">Reserved Meeting Rooms & Halls</a></li>
-                    <li><a href="#">Available Meeting Rooms & Halls</a></li>
+                    <li><a href="/RMS/html-php/available_meeting_rooms.php">Available Meeting Rooms & Halls</a></li>
                 </ul>
             </li>
             <li><a href="/RMS/html-php/home.php">Log Out</a></li>
@@ -75,12 +78,13 @@
 
 
 <!--https://youtu.be/1NC8G_zWDJY-->
-<div>
-    <h1>Villa Details</h1>
-</div>
+
 
 
 <div class="list">
+   <div>
+      <h1>Villa Details</h1>
+   </div>
     <table>
         <thead>
             <tr>

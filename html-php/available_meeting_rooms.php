@@ -12,7 +12,6 @@
         body{
             background-color: rgb(137,138,116);
         }
-        
         table{
             border-collapse: collapse;
             width: 100%;
@@ -21,7 +20,6 @@
             font-size: 20px;
             text-align: center;
         }
-
         th{
             background-color: black;
             color: whitesmoke;
@@ -80,12 +78,10 @@
 
 <!--https://youtu.be/1NC8G_zWDJY-->
 
-
-
 <div class="list">
-<div>
-    <h1>Meeting & Hall Details</h1>
-</div>
+    <div>
+        <h1>Available Meeting Rooms & Halls</h1>
+    </div>
     <table>
         <thead>
             <tr>
@@ -104,7 +100,7 @@
     
         $con = mysqli_connect($server,$username,$password,$database);
 
-        $selectquery = " select * from meeting";
+        $selectquery = " select * from meeting where Available = 'Yes'";
         $query = mysqli_query($con,$selectquery);
         $num = mysqli_num_rows($query);
         while($res = mysqli_fetch_array($query)){

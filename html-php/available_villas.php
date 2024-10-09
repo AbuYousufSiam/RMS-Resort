@@ -12,7 +12,6 @@
         body{
             background-color: rgb(137,138,116);
         }
-        
         table{
             border-collapse: collapse;
             width: 100%;
@@ -21,7 +20,6 @@
             font-size: 20px;
             text-align: center;
         }
-
         th{
             background-color: black;
             color: whitesmoke;
@@ -80,16 +78,14 @@
 
 <!--https://youtu.be/1NC8G_zWDJY-->
 
-
-
 <div class="list">
-<div>
-    <h1>Meeting & Hall Details</h1>
-</div>
+    <div>
+        <h1>Available Villas</h1>
+    </div>
     <table>
         <thead>
             <tr>
-                <th>Name</th>
+                <th>Type</th>
                 <th>Available</th>
                 <th>Capacity</th>
                 <th>Rate</th>
@@ -104,13 +100,13 @@
     
         $con = mysqli_connect($server,$username,$password,$database);
 
-        $selectquery = " select * from meeting";
+        $selectquery = " select * from villas";
         $query = mysqli_query($con,$selectquery);
         $num = mysqli_num_rows($query);
         while($res = mysqli_fetch_array($query)){
         ?>
            <tr>
-            <td><?php echo $res['Name'];?></td>
+            <td><?php echo $res['Type'];?></td>
             <td><?php echo $res['Available'];?></td>
             <td><?php echo $res['Capacity'];?></td>
             <td><?php echo $res['Rate'];?></td>

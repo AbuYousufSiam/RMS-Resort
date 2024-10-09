@@ -21,153 +21,8 @@
             <li><a href="/RMS/html-php/review.php">Reviews</a></li>
         </ul>
     </div>
-    <!--This is the php query to just fetch-->
-    
-  
-        
-<!--Customer Review-->
-    <section id="review">
-        <!--review-heading-->
-        <div class="review-heading">
-            <h1>Customer Reviews</h1>
-        </div>
 
-        <!--Review-box-container--->
-        <div class="review-box-container">
-            <!--Box-1-->
-            <div class="review-box">
-                <!--top-->
-                <div class="box-top">
-                    <!--profile-->
-                    <div class="profile">
-                        <!--image-->
-                        <div class="profile-img">
-                            <img src="/RMS/img/villa1.jpg">
-                        </div>
-                        <!--name-and-email-->
-                        <div class="name-email">
-                            <strong>Namira Rahman</strong>
-                            <span>namira@gmail.com</span>
-
-                        </div>
-                    </div>
-                    <!--reviews-->
-                    <div class="reviews">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                </div>
-
-                <!--Comments-->
-                <div class="comment">
-                    <p>AAAAAAAA</p>
-                </div>
-            </div>
-            <!--Box-2-->
-            <div class="review-box">
-                <!--top-->
-                <div class="box-top">
-                    <!--profile-->
-                    <div class="profile">
-                        <!--image-->
-                        <div class="profile-img">
-                            <img src="/RMS/img/villa2.jpg">
-                        </div>
-                        <!--name-and-email-->
-                        <div class="name-email">
-                            <strong>Tanmoy Chowdhury</strong>
-                            <span>tanmoy@gmail.com</span>
-
-                        </div>
-                    </div>
-                    <!--reviews-->
-                    <div class="reviews">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                </div>
-
-                <!--Comments-->
-                <div class="comment">
-                    <p>BBBBBBBBBB</p>
-                </div>
-            </div>
-            <!--Box-3-->
-            <div class="review-box">
-                <!--top-->
-                <div class="box-top">
-                    <!--profile-->
-                    <div class="profile">
-                        <!--image-->
-                        <div class="profile-img">
-                            <img src="/RMS/img/villa3.jpg">
-                        </div>
-                        <!--name-and-email-->
-                        <div class="name-email">
-                            <strong>Uday Ahmed</strong>
-                            <span>uday@gmail.com</span>
-
-                        </div>
-                    </div>
-                    <!--reviews-->
-                    <div class="reviews">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-half-o"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                </div>
-
-                <!--Comments-->
-                <div class="comment">
-                    <p>CCCCCCCCCCCCCCCC</p>
-                </div>
-            </div>
-            <!--Box-4-->
-            <div class="review-box">
-                <!--top-->
-                <div class="box-top">
-                    <!--profile-->
-                    <div class="profile">
-                        <!--image-->
-                        <div class="profile-img">
-                            <img src="/RMS/img/villa4.jpg">
-                        </div>
-                        <!--name-and-email-->
-                        <div class="name-email">
-                            <strong>Jahid Islam</strong>
-                            <span>jahid@gmail.com</span>
-
-                        </div>
-                    </div>
-                    <!--reviews-->
-                    <div class="reviews">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-half-o"></i>
-                    </div>
-                </div>
-
-                <!--Comments-->
-                <div class="comment">
-                    <p>DDDDDDDDDDDD</p>
-                </div>
-            </div>
-        </div>
-
-    </section>
-    
-    
-    <hr>
+ 
     <!--Review-Form-->
     <div class="review-form">
         <div class="review-heading">
@@ -185,18 +40,11 @@
                 <textarea name="comment" rows="4" cols="50" ></textarea><br>
 
                 <label for="quantity"><b>Give Rating(out of 5):</b></label><br>
-                <input type="number" id="quantity" name="quantity" min="0" max="5" step="0.5" value="5"><br>
+                <input type="number" id="quantity" name="quantity" min="0" max="5" step="0.5" value="1"><br>
                 
                 <input class="button" type="submit" name="button" value="Submit" style="color: black;cursor: pointer;width: 30%">
             </form>
         </div>
-    </div>
-    
-    <!--footer-->
-    <div class="footer">
-        <p style="font-size: 60px;"><b>Tusti Resort</b></p><br>
-        <p style="font-size: 20px;">59/A,Mouchak,Gazipur,Dhaka</p><br>
-        <p style="font-size: 15px;">Contact Us: +880 01712577638, Hotline:  +880 1617005522</p>
     </div>
 
     <?php
@@ -224,7 +72,7 @@
                                 alert("Thanks for your review!");
                             </script>
                             <?php
-                            header("Location:/RMS/html-php/home.php");
+                            header("Location:/RMS/html-php/review.php");
                             }
                         else{
                                 ?>
@@ -238,6 +86,88 @@
                 }
             }
         ?>
+   
+    <hr>
+    <!--Customer Review-->
+        <!--review-heading-->
+        <div class="review-heading"> <h1>Customer Reviews</h1> </div>
+        <!--php fetch data-->
+        <?php
+            $selectquery = " select * from customer_review";
+            $query = mysqli_query($con,$selectquery);
+            $num = mysqli_num_rows($query);
+            while($res = mysqli_fetch_array($query)){
+        ?>
+        <section id="review">
+        <!--Review-box-container--->
+        <div class="review-box-container">
+            <!--Box-1-->
+            <div class="review-box">
+                <!--top-->
+                <div class="box-top">
+                    <!--profile-->
+                    <div class="profile">
+                        <!--image-->
+                        <div class="profile-img">
+                            <img src="/RMS/img/villa1.jpg">
+                        </div>
+
+                        <!--name-and-email-->
+                        <div class="name-email">
+                            <strong><?php echo $res['Name'];?></strong>
+                            <span><?php echo $res['Email'];?></span>
+
+                        </div>
+                    </div>
+                    <!--reviews-->
+                    <div class="reviews">
+                        <?php
+                         $a = $res['Rating'];
+                         for($i = 0; $i <5 ; $i++)
+                         {
+                            if($a>=1){
+                           ?>
+                              <i class="fa fa-star"></i>
+                           <?php 
+                           $a--;   
+                            }
+                            else if($a == 0.5)
+                           {
+                           ?>
+                                <i class="fa fa-star-half-o"></i>
+                            <?php
+                            $a = $a - 0.5;
+                            }
+                            else 
+                            {
+                                ?>
+                                <i class="fa fa-star-o"></i>
+                            <?php   
+                            }
+                        }
+                        ?>
+                    </div>
+                </div>
+
+                <!--Comments-->
+                <div class="comment">
+                    <p><?php echo $res['Review'];?></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <?php
+     }
+    ?>
+
+    <!--footer-->
+    <div class="footer">
+        <p style="font-size: 60px;"><b>Tusti Resort</b></p><br>
+        <p style="font-size: 20px;">59/A,Mouchak,Gazipur,Dhaka</p><br>
+        <p style="font-size: 15px;">Contact Us: +880 01712577638, Hotline:  +880 1617005522</p>
+    </div>
+
+    
 
 </body>
 </html>

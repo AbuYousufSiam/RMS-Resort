@@ -96,3 +96,9 @@ nav ul ul li a{
 }
 
 /*data display table*/
+.list{
+    background-color: rgb(123,182,97);
+    margin-left: 20px;
+    margin-right: 20px;
+   
+}

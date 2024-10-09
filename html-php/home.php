@@ -47,7 +47,7 @@
             <li><a href="/RMS/html-php/rooms.php">Rooms</a></li>
             <li><a href="/RMS/html-php/villas.php">Villas</a></li>
             <li><a href="/RMS/html-php/meeting.php">Meeting</a></li>
-            <li><a href="RMS/html-php/dining.php">Dining</a></li>
+            <li><a href="/RMS/html-php/dining.php">Dining</a></li>
             <li><a href="/RMS/html-php/offers.php">Special Offers</a></li>
             <li><a href="/RMS/html-php/review.php">Reviews</a></li>
             <li><a href="/RMS/html-php/booking.php">Book Now</a></li>
@@ -94,7 +94,7 @@
             <b>Room Capacity:</b>2 Adults/ Rooms<br>
             <b>Rates:</b>(starts from)12000++/ Night<br>
         </p>
-        <p><a href="/RMS/html-php/booking.php">See More</a><p>
+        <p><a href="/RMS/html-php/rooms.php">See More</a><p>
     </div>
 
     <div class="headerl">
@@ -106,7 +106,7 @@
             <b>Room Capacity:</b>2 Adults/ Rooms(Total 4-6)<br>
             <b>Rates:</b>(starts from)16000++/ Night<br>
         </p>
-        <p><a href="/RMS/html-php/booking.php">See More</a><p>
+        <p><a href="/RMS/html-php/villas.php">See More</a><p>
     </div>
 
     <div class="info">
