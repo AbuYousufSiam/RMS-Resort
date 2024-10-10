@@ -40,7 +40,11 @@ Rusty celadon
         color: #5E5D59;
        }
        a{
-            color: whitesmoke;
+            color: orangered;
+            text-decoration: none;
+        }
+        a:hover{
+            color: blue;
             text-decoration: none;
         }
 
@@ -97,6 +101,7 @@ Rusty celadon
                 <th>Address</th>
                 <th>email</th>
                 <th>Phone Number</th>
+                <th colspan="2">Update/ Delete</th>
             </tr>
         </thead>
         <tbody>
@@ -111,20 +116,30 @@ Rusty celadon
         $selectquery = " select * from admin";
         $query = mysqli_query($con,$selectquery);
         $num = mysqli_num_rows($query);
-        while($res = mysqli_fetch_array($query)){
-        ?>
+        while($res = mysqli_fetch_array($query))
+        echo"
            <tr>
-           <td><?php echo $res['id'];?></td>
-            <td><?php echo $res['name'];?></td>
-            <td><?php echo $res['address'];?></td>
-            <td><?php echo $res['email'];?></td>
-            <td><?php echo $res['phone'];?></td>
+            <td>".$res['id']."</td>
+            <td>".$res['name']."</td>
+            <td>".$res['address']."</td>
+            <td>".$res['email']."</td>
+            <td>".$res['phone']."</td>
+            <td> <a href='update.php?idno=$res[id]&nm=$res[name]&usr=$res[username]&adr=$res[address]&em=$res[email]&cn=$res[phone]' > Edit/Update </td>
+            <td> <a href='delete.php?idno=$res[id]'  onclick= 'return checkdelete()'> Delete </td>
+           
            </tr>
-        <?php
-        }
+           
+    ";
+        
+        
         ?>
         </tbody>
     </table>
+    <script>
+function checkdelete(){
+    return Confirm("Are you sure you want to delete this record?");
+}
+    </script>
     </div>
 </body>
 </html>
